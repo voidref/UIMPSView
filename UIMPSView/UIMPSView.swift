@@ -59,10 +59,14 @@ class UIMPSView: MTKView {
 
   override func layoutSubviews() {
     super.layoutSubviews()
+    let sourceRect = sourceView.frame
     sourceView.sizeToFit()
     frame.size = sourceView.bounds.size
     sourceView.frame = bounds
-    updateContent()
+
+    if sourceRect != sourceView.frame {
+      updateContent()
+    }
   }
 
   override func draw(_ rect: CGRect) {
