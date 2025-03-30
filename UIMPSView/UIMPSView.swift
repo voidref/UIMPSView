@@ -3,6 +3,8 @@
 //  UIMPSView
 //
 //  Created by Alan Westbrook on 3/29/25.
+//  (c) 2025 Rockwood Software
+//  MIT Licence
 //
 
 import UIKit
@@ -50,6 +52,7 @@ class UIMPSView: MTKView {
     super.init(frame: frame, device: device ?? MTLCreateSystemDefaultDevice())
     commandQueue = self.device?.makeCommandQueue()
     framebufferOnly = false
+    enableSetNeedsDisplay = true
     isPaused = true
     addSubview(sourceView)
   }

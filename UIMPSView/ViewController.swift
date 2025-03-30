@@ -3,6 +3,8 @@
 //  UIMPSView
 //
 //  Created by Alan Westbrook on 3/29/25.
+//  (c) 2025 Rockwood Software
+//  MIT Licence
 //
 
 import UIKit
@@ -58,8 +60,6 @@ class ViewController: UIViewController {
     mpsView.layer.position = view.layer.position
 
     view.addSubview(mpsView)
-    mpsView.isPaused = true
-    mpsView.enableSetNeedsDisplay = true
     self.mpsView = mpsView
 
     let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
