@@ -1,6 +1,6 @@
 //
-//  UIMPSView.swift
-//  UIMPSView
+//  ShaderView.swift
+//  Metal Performance Shader UIView
 //
 //  Created by Alan Westbrook on 3/29/25.
 //  (c) 2025 Rockwood Software
@@ -11,7 +11,7 @@ import UIKit
 import MetalKit
 import MetalPerformanceShaders
 
-class UIMPSView: MTKView {
+class ShaderView: MTKView {
 
   struct RenderParams {
     let commandBuffer: MTLCommandBuffer
@@ -19,7 +19,7 @@ class UIMPSView: MTKView {
     let device: MTLDevice
     let progress: Float?
     let sourceTexture: MTLTexture
-    let view: UIMPSView
+    let view: ShaderView
   }
 
   typealias RenderCallback = (RenderParams) -> Void

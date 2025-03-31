@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  UIMPSView
+//  Metal Performance Shader UIView
 //
 //  Created by Alan Westbrook on 3/29/25.
 //

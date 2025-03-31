@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  UIMPSView
+//  Metal Performance Shader UIView
 //
 //  Created by Alan Westbrook on 3/29/25.
 //  (c) 2025 Rockwood Software
@@ -12,7 +12,7 @@ import MetalKit
 import MetalPerformanceShaders
 
 class ViewController: UIViewController {
-  private var mpsView: UIMPSView?
+  private var mpsView: ShaderView?
   private var blurred = false
   private let blurSigma: Float = 40.0
 
@@ -34,7 +34,7 @@ class ViewController: UIViewController {
     label.frame.origin = CGPoint(x: -inset, y: -inset)
 
     // An example to blur in and out
-    let mpsView = UIMPSView(sourceView: sourceView) { [weak self] params in
+    let mpsView = ShaderView(sourceView: sourceView) { [weak self] params in
       guard let self else { return }
       let progress = params.progress ?? 1.0
       let blurFactor = blurred ? 1.0 - progress : progress
